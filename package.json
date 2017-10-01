@@ -1,0 +1,23 @@
+{
+  "name": "atividade-cssinteligentecomsass",
+  "version": "1.0.0",
+  "description": "Atividade para o módulo CSS inteligente com SASS para o curso Certificação Boostrap",
+  "main": "dist/index.html",
+  "repository": "https://github.com/gabriel-barreto/atividade-cssinteligentecomsass",
+  "author": "Gabriel Barreto",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-uglifycss": "^1.0.8",
+    "gulp-watch": "^4.3.11"
+  }
+}
