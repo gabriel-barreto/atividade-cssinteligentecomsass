@@ -2,6 +2,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const csscomments = require('gulp-strip-css-comments');
 const cssmin = require('gulp-cssmin');
+const copy = require('gulp-copy');
 const gulp = require('gulp');
 const htmlMin = require('gulp-htmlmin');
 const notify = require('gulp-notify');
@@ -42,9 +43,13 @@ gulp.task('compressIndex', ['cleanIndex'], function() {
 	.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', function() {
+gulp.task('copy-fonts', function() {
+	gulp.src('./source/stylesheets/fonts/**/*.*').pipe(copy('./dist/css/fonts/', { prefix: 3 }));
+});
+
+gulp.task('default', ['copy-fonts'], function() {
 	gulp.watch(['./source/stylesheets/*.scss'], ['sass']);
 	gulp.watch(['./source/index.html'], ['compressIndex']);
 });
 
-gulp.task('build', ['compressIndex', 'sass'], function() {});
+gulp.task('build', ['compressIndex', 'sass', 'copy-fonts'], function() {});
