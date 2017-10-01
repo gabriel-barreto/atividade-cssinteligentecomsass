@@ -1,0 +1,32 @@
+@mixin navbar-theme($bd-color,
+	$bg-color,
+	$text-color,
+	$brand-color,
+	$text-hover-color,
+	$bg-hover-color) {
+	background-color: $bg-color;
+	border-color: $bd-color;
+	color: $text-color;
+	.navbar-brand {
+		color: $brand-color;
+		&:hover {
+			background-color: $bg-hover-color;
+			color: $text-hover-color;
+		}
+	}
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				color: $text-color;
+				&:hover {
+					background-color: $bg-hover-color;
+					color: $text-hover-color;
+				}
+			}
+		}
+	}
+}
+
+@mixin transitions($mode, $time) {
+	transition: $time all $mode;
+}

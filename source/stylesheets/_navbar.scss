@@ -1,0 +1,16 @@
+.navbar {
+	@extend %navbar;
+	@include navbar-theme($bd-color, $bg-color, $text-color, $brand-color, $text-hover-color, $bg-hover-color);
+	.navbar-brand {
+		@extend %nav-brand;
+	}
+	.navbar-nav {
+		@extend %nav;
+		.nav-item {
+			height: 100%;
+			.nav-link {
+				@extend %nav-link;
+			}
+		}
+	}
+}
